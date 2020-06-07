@@ -98,7 +98,7 @@ select {
   padding: 20px;
   margin: 0;
   background: black;
-  background-image: url("../images/nasa.jpg");
+  background-image: url("https://akns-images.eonline.com/eol_images/Entire_Site/20171114/rs_1024x759-171214072401-1024.2-the-x-files.ch.121417.jpg?fit=inside|900:auto&output-quality=90");
   background-attachment: fixed;
   background-position: bottom center;
   background-size: cover;
@@ -108,6 +108,7 @@ select {
   margin-top: 200px;
   font-size: 0.1rem;
   animation: title 1.2s forwards linear;
+  color: white;
 }
 
 .hero p {
@@ -115,6 +116,7 @@ select {
   opacity: 0;
   animation: subtitle 1.2s forwards linear;
   animation-delay: 1.2s;
+  color: whitesmoke;
 }
 
 /* input placeholder color changes */
