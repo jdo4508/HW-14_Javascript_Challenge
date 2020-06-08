@@ -8,13 +8,12 @@ console.log(tableData);
 var tbody = d3.select("tbody");
 
 
-// Create function that will add data to the table
-// (datetime, city, state, country, shape, duration, comments)
+// Create function that will add data to the table (datetime, city, state, country, shape, duration, comments)
 function createTable(data) {
   tbody.html("");
 
  
- //for each sighting event, append rows and cells to table
+ //For each sighting event, append rows and cells to table
   data.forEach((sighting) => {
     
       var row = tbody.append("tr");
@@ -27,34 +26,34 @@ function createTable(data) {
   });
 }
 
-  // Create function for when the button is selected
+  //Create function for button
 function buttonClick() {
-  // Select the input element and get the raw HTML node
+  //Select the date element and get the raw HTML node
   var inputElement = d3.select("#datetime");
 
-  // Get the value property of the input element
+  //Get the value from the input 
   var inputValue = inputElement.property("value");
   let filteredData = tableData;
 
-  // Check the date that is input and the table data
+  //View table data
   console.log(inputValue);
   console.log(tableData);
   
-  // Grab the user input to filter the data
+  //Use user input to filter the data
   if (inputValue) {
     filteredData = tableData.filter(sightings => sightings.datetime === inputValue);
 }
   
-// Check to see if the data filtered correctly
+//View data for proper filtering
 console.log(filteredData);
 
-// Build the filtered table
+//Create the filtered table
 createTable(filteredData);
 }
 
-// Select the button
+//create button for filtering
 var button = d3.select("#filter-btn");
 button.on("click", buttonClick);
 
-// Build the unfiltered table
+//Create table 
 createTable(tableData);
